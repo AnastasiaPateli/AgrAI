@@ -1,112 +1,60 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Έλεγχος Συνδεδεμένης Ενίσχυσης</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0055aa; color: white; }
+    </style>
+</head>
+<body>
 
-    <!DOCTYPE html>
-    <html lang="el">
-    <head>
-        <meta charset="UTF-8">
-        <title>ΟΣΔΕ News - Ενημέρωση Γραφείου</title>
-        <meta http-equiv="refresh" content="600"> <!-- Αυτόματη ανανέωση browser κάθε 10 λεπτά -->
-        <style>
-            body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
-            .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-            h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
-            .update-badge { background: #e8f8f5; color: #1abc9c; padding: 10px; text-align: center; border-radius: 5px; font-weight: bold; margin-bottom: 20px; border: 1px solid #a3e4d7; }
-            .site-box { margin-bottom: 25px; border-left: 4px solid #3498db; padding-left: 15px; background: #fafafa; padding: 15px; border-radius: 0 8px 8px 0; }
-            h3 { margin-top: 0; color: #2980b9; }
-            ul { margin: 5px 0; padding-left: 20px; }
-            li { margin-bottom: 8px; line-height: 1.4; }
-            a { color: #2980b9; text-decoration: none; font-size: 0.9em; }
-            a:hover { text-decoration: underline; }
-            .footer { text-align: center; margin-top: 30px; font-size: 0.85em; color: #7f8c8d; }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>🌾 ΟΣΔΕ News - Ενημερωτικό Γραφείου</h1>
-            <div class="update-badge">
-                🕒 Τελευταία επιτυχημένη ενημέρωση συστήματος: 11/08/2026 και ώρα 12:33:43
-            </div>
+<div class="container">
+    <h1>Έλεγχος Συνδεδεμένης Ενίσχυσης</h1>
+    <p>Ανεβάστε το αρχείο δεδομένων (CSV) για έλεγχο:</p>
+    <input type="file" id="fileInput">
     
-        <div class="site-box">
-            <h3>Εφημερίδα της Κυβερνήσεως (ΕΤ) <a href="https://et.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Καλώς ήρθατε στο Εθνικό Τυπογραφείο</li><li>Τα Τεύχη μας</li><li>Το Εθνικό Τυπογραφείο εκδίδει την Εφημερίδα της Κυβερνήσεως (ΦΕΚ) σε διακριτά μεταξύ τους τεύχη από το περιεχόμενο των θεμάτων της και τη διαθέτει σε έντυπη και ηλεκτρονική μορφή.</li><li>Συχνές ερωτήσεις</li><li>© Copyright Εθνικό Τυπογραφείο - Δ/νση Ζ Πληροφορικής . All Rights Reserved</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>ΑΑΔΕ - Δελτία Τύπου <a href="https://www.aade.gr/deltia-typoy-anakoinoseis" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Δελτία Τύπου - Ανακοινώσεις</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>Agronews <a href="https://www.agronews.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Στα 73 ευρώ το στρέμμα σταθερά και το 2026 η ειδική βάμβακος, ορατή προσαύξηση έως 25% στα 91,6 ευρώ από 2028</li><li>Οι παγκόσμιες συγκυρίες προμηνύουν άνοδο τιμών στο καλαμπόκι, κρίσιμος ο παράγοντας των εισαγωγών</li><li>Εργονομία, ευημερία και ποιοτικό γάλα με επιλογή εξοπλισμού της Mlikplan</li><li>Μια ΚΑΠ για τους αγρότες, μια ΔΕΘ για την μεσαία τάξη, η δέσμευση για μετά το 2027 και ο… Λαρισαίος</li><li>Βυθίζονται οι εξαγωγές σιτηρών Ουκρανίας, εκτίμηση για πτώση 53%</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>ΑγροΤύπος <a href="https://www.agrotypos.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Δεν βρέθηκαν πρόσφατοι τίτλοι.</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>Ύπαιθρος Χώρα <a href="https://www.ypaithros.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Καλαμπόκι: Θετική η εικόνα της παραγωγής, αισιοδοξία για καλύτερες τιμές</li><li>Η Αυστραλία θα εμβολιάσει τα πτηνά κατά του στελέχους H5 της γρίπης των πτηνών</li><li>Οι Καβαλιώτες αμπελοκαλλιεργητές ζητούν εξατομικευμένες αποζημιώσεις για τις σοβαρές ζημιές από τον περονόσπορο</li><li>Ολοκληρωμένη πρόταση της Περιφέρειας Πελοποννήσου για τη νέα ΚΑΠ</li><li>Χανιά: Έκλεβαν ψάρια από τους ιχθυοκλωβούς του ΕΛΚΕΘΕ</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>E-Agrotis <a href="https://e-agrotis.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>e-Agrotis.gr Αγροτική ενημέρωση, Aγροτικά νέα, Aγροτικές ειδήσεις 24/7</li><li>e-Agrotis.gr e-Agrotis.gr Αγροτική ενημέρωση, Aγροτικά νέα, Aγροτικές ειδήσεις 24/7</li><li>Αιολικά πάρκα: Πανελλαδική έρευνα μετά τη φωτιά στη Βοιωτία</li><li>Έρευνα CMCC: Στα όρια κατάρρευσης ο αγροτικός τομέας στην ΕΕ</li><li>Eurostat Άνοδος στην παραγωγή θερμοκηπιακών κηπευτικών</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>In.gr Agro <a href="https://www.in.gr/economy/agro-in/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Ενημερωθείτε καθημερινά για όλα όσα αφορούν τους αγρότες και τους κτηνοτρόφους. Δείτε ειδήσεις για επιδοτήσεις, καλλιέργειες, ζωική παραγωγή και τις τελευταίες αγροτικές τεχνολογίες. Παρακολουθήστε τις εξελίξεις στην ευρωπαϊκή πολιτική, τα μέτρα στήριξης και τις κινητοποιήσεις που επηρεάζουν τους αγρότες και τον υπόλοιπο πρωτογενή τομέα.</li><li>Ποιοι κινδυνεύουν να χάσουν τις αγροτικές ενισχύσεις - Ποιες νέες κυρώσεις προβλέπονται</li><li>Ευοίωνες οι προοπτικές του ελληνικού μελιού στη γαλλική αγορά - Σταθερά υψηλή κατανάλωση</li><li>Κουτσούμπας: Χρειάζονται άμεσα μέτρα για τους αγρότες της Φθιώτιδας που καταστράφηκαν από την κακοκαιρία</li><li>Εννέα κρούσματα ευλογιάς των προβάτων στην Περιφέρεια Πελοποννήσου</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>AgroCapital <a href="https://www.agrocapital.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>«Super» El Niño: Πιο ανθεκτικό το παγκόσμιο σύστημα τροφίμων απέναντι στην ξηρασία</li><li>Κίνα: Με καλλιέργεια chufa μετατρέπει την έρημο σε παραγωγική γη</li><li>Ισπανία: Περισσότερα έσοδα από τις εξαγωγές φρούτων και λαχανικών με μικρότερους όγκους</li><li>Ο πόλεμος πιέζει τις εξαγωγές σιτηρών Ρωσίας και Ουκρανίας</li><li>Ποιοι αγρότες μπαίνουν πρώτοι στο ταμείο στις πληρωμές του Αυγούστου</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>Agro24 <a href="https://www.agro24.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Οδηγίες για διορθώσεις έως 7/9 σε στοιχεία των αιτήσεων ενίσχυσης του 2025 και στις συνδεδεμένες ενισχύσεις</li><li>Από 30% έως 60% η μείωση παραγωγής ροδάκινων και νεκταρινιών στον ευρύτερο κάμπο του Βελβεντού</li><li>Καμπανάκι γεωτεχνικών και κτηνοτρόφων για πληρωμές ενισχύσεων «εικονικών αιγοπροβάτων» και το 2025</li><li>Αναλυτικές οδηγίες για την διαδικασία εξουσιοδότησης προς υποβολή της νέας αίτησης αγροτικών ενισχύσεων</li><li>«Τα μέτρα της Κυβέρνησης για την ευλογιά, αλλά και της Περιφερειακής Αρχής, είναι ημίμετρα, δεν αρκούν και ρίχνουν τα βάρη στην ατομική ευθύνη!»</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>ΑγροΈκφραση <a href="https://agroekfrasi.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Δικαστικό «ράπισμα» σε Meta, Google, TikTok και Snapchat για τον εθισμό των νέων στα social media</li><li>Ποια ανάπτυξη μας ενδιαφέρει; Aγροτική  ή οικιστική ή τουριστική; χάθηκε 1/4 των αγροτικών εκμεταλλεύσεων του Βορείου Αιγαίου</li><li>myAGRO: Σε λειτουργία η πλατφόρμα – Νωρίτερα οι προκαταβολές για αιτήσεις έως 15 Σεπτεμβρίου – Όσα είπε ο διοικητής της ΑΑΔΕ</li><li>Κυριάκος Μητσοτάκης: επισκέφθηκε μαζί με υπουργούς την ΑΑΔΕ ενόψει της πλατφόρμας myAGRO</li><li>Σήμερα η εκδήλωση/ενημέρωση της ΑΑΔΕ για το ΟΣΔΕ 2026 στις 16:00</li>
-            </ul>
-        </div>
-    
-        <div class="site-box">
-            <h3>ΥΠΑΑΤ <a href="https://www.minagric.gr/" target="_blank">[🔗 Επίσκεψη]</a></h3>
-            <ul>
-    <li>Προγράμματα – Προσκλήσεις Μέτρων</li><li>Κτηνοτροφία</li><li>Εγκεκριμένες / Καταχωρημένες Μονάδες - Εγκαταστάσεις Διαχείρισης ΖΥΠ Ελλάδας</li><li>Φυτοπροστασία</li><li>Εθνικό Σχέδιο Δράσης για την Ορθολογική Χρήση των Γεωργικών Φαρμάκων</li>
-            </ul>
-        </div>
-    
-            <div class="footer">
-                <p>Αυτόματος Agent Γραφείου - Ενημερώνεται αυτόματα κάθε 40 λεπτά.</p>
-            </div>
-        </div>
-    </body>
-    </html>
-    
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Α/Α Αγροτεμαχίου</th>
+                <th>Καλλιέργεια</th>
+                <th>Συνδεδεμένη Ενίσχυση</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+
+<script>
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const lines = e.target.result.split('\n');
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = ''; // Καθαρισμός πίνακα
+
+            lines.forEach(line => {
+                const [aa, code, syndedemeni] = line.split(',');
+                if (['1', '3.1', '12'].includes(code)) {
+                    const row = `<tr>
+                        <td>${aa}</td>
+                        <td>${code}</td>
+                        <td>${syndedemeni}</td>
+                    </tr>`;
+                    tbody.innerHTML += row;
+                }
+            });
+        };
+        reader.readAsText(file);
+    });
+</script>
+
+</body>
+</html>
