@@ -8,33 +8,26 @@
 </head>
 <body>
 
-    <!-- Κορυφαία Μπάρα -->
-    <div class="top-bar">
-        <span><strong>ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</strong> · ΟΣΔΕ / ΕΑΕ 2026</span>
-        <span>Τηλ. Κέντρο: <strong>210 0000000</strong> • Email: <strong>info@geopoliteia.gr</strong></span>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <h1>ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</h1>
-        <p>Σωστή αίτηση. Σωστή υποστήριξη. Οργανωμένη υποστήριξη ΟΣΔΕ 2026 με γεωτεχνική τεκμηρίωση και ψηφιακή ροή.</p>
-    </header>
-
-    <!-- Navigation Menu με το Hamburger Button -->
-    <nav>
+    <!-- Top Navigation (Foster + Partners Style) -->
+    <nav class="foster-nav">
         <div class="nav-brand">ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</div>
-        <!-- Το κουμπί με τις 3 γραμμούλες -->
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="nav-right">
+            <span class="nav-phone">📞 210 0000000</span>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Αναδυόμενο Μενού στο Κέντρο (Pop-up Menu) -->
-    <div id="mobileMenu" class="overlay-menu">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-        <div class="overlay-content">
+    <!-- Fullscreen Overlay Menu (Ακριβώς όπως στο παράδειγμα) -->
+    <div id="fosterMenu" class="foster-overlay">
+        <div class="overlay-header">
+            <span class="overlay-title">Menu</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        </div>
+        <div class="overlay-links">
             <a href="index.html" onclick="toggleMenu()">Αρχική</a>
             <a href="#guides" onclick="toggleMenu()">Οδηγοί ΕΑΕ</a>
             <a href="#team" onclick="toggleMenu()">Το Γραφείο</a>
@@ -44,6 +37,12 @@
             <a href="#contact" onclick="toggleMenu()">Επικοινωνία</a>
         </div>
     </div>
+
+    <!-- Header -->
+    <header>
+        <h1>ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</h1>
+        <p>Σωστή αίτηση. Σωστή υποστήριξη. Οργανωμένη υποστήριξη ΟΣΔΕ 2026 με γεωτεχνική τεκμηρίωση και ψηφιακή ροή.</p>
+    </header>
 
     <main>
         <!-- ΕΝΟΤΗΤΑ: ΟΔΗΓΟΙ / TABS -->
@@ -157,7 +156,7 @@
         </section>
     </main>
 
-    <!-- POP-UP MODAL WINDOWS ΓΙΑ Τous ΟΔΗΓΟΥΣ -->
+    <!-- MODALS ΓΙΑ ΟΔΗΓΟΥΣ -->
     <div id="modal-genikos" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-genikos')">&times;</span>
@@ -194,10 +193,10 @@
         <p>&copy; 2026 ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ. Η σελίδα έχει ενημερωτικό χαρακτήρα. Υπερισχύουν τα επίσημα κείμενα.</p>
     </footer>
 
-    <!-- JavaScript για το Hamburger Menu και τα Modals -->
+    <!-- JavaScript -->
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
+            const menu = document.getElementById('fosterMenu');
             menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
 
