@@ -20,17 +20,61 @@
         <p>Σωστή αίτηση. Σωστή υποστήριξη. Οργανωμένη υποστήριξη ΟΣΔΕ 2026 με γεωτεχνική τεκμηρίωση και ψηφιακή ροή.</p>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation Menu με το Hamburger Button -->
     <nav>
-        <a href="index.html">Αρχική</a>
-        <a href="#team">Το Γραφείο</a>
-        <a href="#stages">Τα 5 Στάδια</a>
-        <a href="#interoperability">Διαλειτουργικότητα</a>
-        <a href="#deadlines">Προθεσμίες</a>
-        <a href="#contact">Επικοινωνία</a>
+        <div class="nav-brand">ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</div>
+        <!-- Το κουμπί με τις 3 γραμμούλες -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
+    <!-- Αναδυόμενο Μενού στο Κέντρο (Pop-up Menu) -->
+    <div id="mobileMenu" class="overlay-menu">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <div class="overlay-content">
+            <a href="index.html" onclick="toggleMenu()">Αρχική</a>
+            <a href="#guides" onclick="toggleMenu()">Οδηγοί ΕΑΕ</a>
+            <a href="#team" onclick="toggleMenu()">Το Γραφείο</a>
+            <a href="#stages" onclick="toggleMenu()">Τα 5 Στάδια</a>
+            <a href="#interoperability" onclick="toggleMenu()">Διαλειτουργικότητα</a>
+            <a href="#deadlines" onclick="toggleMenu()">Προθεσμίες</a>
+            <a href="#contact" onclick="toggleMenu()">Επικοινωνία</a>
+        </div>
+    </div>
+
     <main>
+        <!-- ΕΝΟΤΗΤΑ: ΟΔΗΓΟΙ / TABS -->
+        <section id="guides">
+            <h2>ΕΑΕ 2026 — Οι Οδηγοί μας</h2>
+            <p>Επιλέξτε την ενότητα που σας αφορά για να δείτε αναλυτικές πληροφορίες και οδηγίες.</p>
+            
+            <div class="guides-grid">
+                <div class="guide-card" onclick="openModal('modal-genikos')">
+                    <h3>📋 Γενικός Οδηγός</h3>
+                    <p>Προθεσμίες, δικαιολογητικά, υποχρεώσεις και βασικοί έλεγχοι ΕΑΕ 2026.</p>
+                    <span class="guide-link">Άνοιγμα οδηγού →</span>
+                </div>
+                <div class="guide-card" onclick="openModal('modal-elaiokomia')">
+                    <h3>🫒 Ελαιοκομία</h3>
+                    <p>Ελιές, οικολογικά προγράμματα και σημεία προσοχής για τον ελαιοπαραγωγό.</p>
+                    <span class="guide-link">Άνοιγμα οδηγού →</span>
+                </div>
+                <div class="guide-card" onclick="openModal('modal-ktinotrofia')">
+                    <h3>🐑 Κτηνοτροφία</h3>
+                    <p>Βοσκότοποι, ζωικό κεφάλαιο, μητρώα και συνδεδεμένες ενισχύσεις.</p>
+                    <span class="guide-link">Άνοιγμα οδηγού →</span>
+                </div>
+                <div class="guide-card" onclick="openModal('modal-eco')">
+                    <h3>🌿 Οικολογικά (Eco Schemes)</h3>
+                    <p>Δράσεις, Σχέδια Περιβαλλοντικής Διαχείρισης και τεκμηρίωση.</p>
+                    <span class="guide-link">Άνοιγμα οδηγού →</span>
+                </div>
+            </div>
+        </section>
+
         <!-- ΕΝΟΤΗΤΑ: ΓΡΑΦΕΙΟ & ΣΤΑΤΙΣΤΙΚΑ -->
         <section id="team">
             <h2>Το Γραφείο μας</h2>
@@ -55,7 +99,7 @@
         <!-- ΕΝΟΤΗΤΑ: 5 ΣΤΑΔΙΑ -->
         <section id="stages">
             <h2>Η Νέα Διαδικασία ΕΑΕ 2026 σε 5 Στάδια</h2>
-            <p>Η υποβολή φέτος περνάει σε μια καθοδηγούμενη ψηφιακή ροή για τη μείωση λαθών:</p>
+            <p>Η υποβολή φέτος περνάει σε μια καθοδηγούμενη ψηφιακή ροή για τη μείωση λαθών[cite: 1]:</p>
             <ul>
                 <li><strong>1. Ταυτοποίηση:</strong> Αφετηρία από τα φορολογικά στοιχεία μέσω κωδικών TAXISnet[cite: 1].</li>
                 <li><strong>2. Προσυμπλήρωση:</strong> Αυτόματη αξιοποίηση δεδομένων από περσινές δηλώσεις, Ε9 και ΟΠΣΚ[cite: 1].</li>
@@ -113,9 +157,63 @@
         </section>
     </main>
 
+    <!-- POP-UP MODAL WINDOWS ΓΙΑ Τous ΟΔΗΓΟΥΣ -->
+    <div id="modal-genikos" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-genikos')">&times;</span>
+            <h2>Γενικός Οδηγός ΕΑΕ 2026</h2>
+            <p>Εδώ αναγράφονται οι βασικές προϋποθέσεις, τα απαραίτητα δικαιολογητικά ταυτοποίησης, οι κανόνες του ενεργού γεωργού και οι προθεσμίες υποβολής.</p>
+        </div>
+    </div>
+
+    <div id="modal-elaiokomia" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-elaiokomia')">&times;</span>
+            <h2>Οδηγός Ελαιοκομίας</h2>
+            <p>Πληροφορίες για τα ελαιοτεμάχια, την ψηφιακή αποτύπωση GIS, τους ελέγχους και τη δήλωση ελαιοκομικών εκμεταλλεύσεων.</p>
+        </div>
+    </div>
+
+    <div id="modal-ktinotrofia" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-ktinotrofia')">&times;</span>
+            <h2>Οδηγός Κτηνοτροφίας</h2>
+            <p>Στοιχεία για ζωικό κεφάλαιο, βοσκότοπους, διασταυρώσεις με ΟΠΣΚ και ενδοστομαχικούς βώλους αιγοπροβάτων.</p>
+        </div>
+    </div>
+
+    <div id="modal-eco" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-eco')">&times;</span>
+            <h2>Οικολογικά Σχήματα (Eco Schemes)</h2>
+            <p>Περιβαλλοντικές δράσεις, σύνταξη Σχεδίου Περιβαλλοντικής Διαχείρισης (ΣΠΔ) και τεχνολογίες γεωργίας ακριβείας.</p>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ. Η σελίδα έχει ενημερωτικό χαρακτήρα. Υπερισχύουν τα επίσημα κείμενα.</p>
     </footer>
+
+    <!-- JavaScript για το Hamburger Menu και τα Modals -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
