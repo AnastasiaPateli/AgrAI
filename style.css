@@ -7,7 +7,6 @@
     --border-color: #d0e1f9;
 }
 
-/* 2. Ομαλή κύλιση σε όλη τη σελίδα */
 html {
     scroll-behavior: smooth;
 }
@@ -21,7 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* Κορυφαία Μπάρα */
 .top-bar {
     background-color: #071e2e;
     color: var(--white);
@@ -34,7 +32,6 @@ body {
     gap: 0.5rem;
 }
 
-/* Header */
 header {
     background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
     color: var(--white);
@@ -55,36 +52,92 @@ header p {
     margin: 0 auto;
 }
 
-/* 1. Σταθερή Μπάρα Πλοήγησης (Sticky Navigation) */
+/* --- STICKY NAV & HAMBURGER BUTTON --- */
 nav {
     background-color: var(--primary-blue);
     display: flex;
-    justify-content: center;
-    padding: 0.8rem;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    
-    /* Κώδικας για να μένει καρφωμένη πάνω */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-nav a {
+.nav-brand {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Κουμπί με τις 3 γραμμούλες (Hamburger) */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* --- FULLSCREEN OVERLAY POP-UP MENU (ΣΤΟ ΚΕΝΤΡΟ) --- */
+.overlay-menu {
+    display: none; /* Κρυφό εξ ορισμού */
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 43, 68, 0.95); /* Σκοτεινό μπλε φόντο */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.overlay-content a {
     color: var(--white);
     text-decoration: none;
+    font-size: 1.5rem;
     font-weight: 600;
-    font-size: 0.95rem;
     transition: color 0.2s;
 }
 
-nav a:hover {
+.overlay-content a:hover {
     color: #a0d2eb;
 }
 
-/* Main Layout */
+.close-menu {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.close-menu:hover {
+    color: #a0d2eb;
+}
+
+/* --- MAIN & SECTIONS --- */
 main {
     max-width: 1100px;
     margin: 2.5rem auto;
@@ -97,9 +150,7 @@ section {
     margin-bottom: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    
-    /* Αποτρέπει να κρύβεται η κορυφή της ενότητας κάτω από τη sticky μπάρα όταν γίνεται κλικ */
-    scroll-margin-top: 80px; 
+    scroll-margin-top: 80px;
 }
 
 h2 {
@@ -110,7 +161,95 @@ h2 {
     font-size: 1.6rem;
 }
 
-/* Stats Grid (Στατιστικά Γραφείου) */
+/* --- ΚΑΡΤΕΣ ΟΔΗΓΩΝ --- */
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.guide-card {
+    background: #f9fbfd;
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 6px 15px rgba(29, 111, 165, 0.15);
+}
+
+.guide-card h3 {
+    margin-top: 0;
+    color: var(--primary-blue);
+    font-size: 1.15rem;
+}
+
+.guide-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.guide-link {
+    font-weight: bold;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+}
+
+/* --- MODAL WINDOWS ΓΙΑ ΟΔΗΓΟΥΣ --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 1.2rem;
+    top: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--primary-blue);
+}
+
+/* Stats Grid */
 .stats-container {
     display: flex;
     gap: 1.5rem;
@@ -141,7 +280,6 @@ h2 {
     font-weight: 500;
 }
 
-/* Warning Box */
 .warning-box {
     background-color: #fff8e6;
     border-left: 4px solid #f0ad4e;
@@ -151,7 +289,6 @@ h2 {
     font-size: 0.95rem;
 }
 
-/* Contact Grid */
 .contact-grid {
     display: flex;
     gap: 1.5rem;
@@ -176,7 +313,6 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
