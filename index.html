@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    <!-- Fullscreen Overlay Menu (Ακριβώς όπως στο παράδειγμα) -->
+    <!-- Fullscreen Overlay Menu -->
     <div id="fosterMenu" class="foster-overlay">
         <div class="overlay-header">
             <span class="overlay-title">Menu</span>
@@ -29,10 +29,10 @@
         </div>
         <div class="overlay-links">
             <a href="index.html" onclick="toggleMenu()">Αρχική</a>
-            <a href="#guides" onclick="toggleMenu()">Οδηγοί ΕΑΕ</a>
-            <a href="#team" onclick="toggleMenu()">Το Γραφείο</a>
-            <a href="#stages" onclick="toggleMenu()">Τα 5 Στάδια</a>
-            <a href="#interoperability" onclick="toggleMenu()">Διαλειτουργικότητα</a>
+            <a href="#guides" onclick="toggleMenu()">Οδηγοί & Καθεστώτα</a>
+            <a href="#stages" onclick="toggleMenu()">Τα 5 Στάδια ΕΑΕ</a>
+            <a href="#active-farmer" onclick="toggleMenu()">Ενεργός Γεωργός</a>
+            <a href="#rights" onclick="toggleMenu()">Δικαιώματα & Αποθέματα</a>
             <a href="#deadlines" onclick="toggleMenu()">Προθεσμίες</a>
             <a href="#contact" onclick="toggleMenu()">Επικοινωνία</a>
         </div>
@@ -47,50 +47,29 @@
     <main>
         <!-- ΕΝΟΤΗΤΑ: ΟΔΗΓΟΙ / TABS -->
         <section id="guides">
-            <h2>ΕΑΕ 2026 — Οι Οδηγοί μας</h2>
-            <p>Επιλέξτε την ενότητα που σας αφορά για να δείτε αναλυτικές πληροφορίες και οδηγίες.</p>
+            <h2>ΕΑΕ 2026 — Οι Οδηγοί & Καθεστώτα</h2>
+            <p>Επιλέξτε την ενότητα που σας αφορά για να δείτε αναλυτικές πληροφορίες από την εγκύκλιο.</p>
             
             <div class="guides-grid">
                 <div class="guide-card" onclick="openModal('modal-genikos')">
-                    <h3>📋 Γενικός Οδηγός</h3>
-                    <p>Προθεσμίες, δικαιολογητικά, υποχρεώσεις και βασικοί έλεγχοι ΕΑΕ 2026.</p>
+                    <h3>📋 Γενικός Οδηγός & Σκοπός</h3>
+                    <p>Φιλοσοφία ΕΑΕ 2026, υποχρέωση μίας αίτησης και αποδεκτές ενισχύσεις.</p>
                     <span class="guide-link">Άνοιγμα οδηγού →</span>
                 </div>
-                <div class="guide-card" onclick="openModal('modal-elaiokomia')">
-                    <h3>🫒 Ελαιοκομία</h3>
-                    <p>Ελιές, οικολογικά προγράμματα και σημεία προσοχής για τον ελαιοπαραγωγό.</p>
+                <div class="guide-card" onclick="openModal('modal-kaθεστωτα')">
+                    <h3>🌾 Καθεστώτα Ενίσχυσης</h3>
+                    <p>Βασική, αναδιανεμητική, νέοι γεωργοί, eco-schemes, βαμβάκι και συνδεδεμένες.</p>
                     <span class="guide-link">Άνοιγμα οδηγού →</span>
                 </div>
-                <div class="guide-card" onclick="openModal('modal-ktinotrofia')">
-                    <h3>🐑 Κτηνοτροφία</h3>
-                    <p>Βοσκότοποι, ζωικό κεφάλαιο, μητρώα και συνδεδεμένες ενισχύσεις.</p>
+                <div class="guide-card" onclick="openModal('modal-monitoring')">
+                    <h3>🛰️ Έλεγχοι & Monitoring</h3>
+                    <p>Δορυφορική παρακολούθηση (AMS), διορθώσεις χωρίς ποινές και κυρώσεις.</p>
                     <span class="guide-link">Άνοιγμα οδηγού →</span>
                 </div>
-                <div class="guide-card" onclick="openModal('modal-eco')">
-                    <h3>🌿 Οικολογικά (Eco Schemes)</h3>
-                    <p>Δράσεις, Σχέδια Περιβαλλοντικής Διαχείρισης και τεκμηρίωση.</p>
+                <div class="guide-card" onclick="openModal('modal-demosio')">
+                    <h3>🏛️ Αγροτεμάχια Δημοσίου</h3>
+                    <p>Διαχείριση εποικιστικών, ΚΑΕΚ και βεβαιώσεις μίσθωσης.</p>
                     <span class="guide-link">Άνοιγμα οδηγού →</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- ΕΝΟΤΗΤΑ: ΓΡΑΦΕΙΟ & ΣΤΑΤΙΣΤΙΚΑ -->
-        <section id="team">
-            <h2>Το Γραφείο μας</h2>
-            <p>Η <strong>ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</strong> στελεχώνεται από έμπειρους γεωπόνους, τεχνικούς συμβούλους και ειδικούς σε GIS και συστήματα πληροφορικής, προσφέροντας ολοκληρωμένη και αξιόπιστη υποστήριξη στους αγρότες και κτηνοτρόφους.</p>
-            
-            <div class="stats-container">
-                <div class="stat-card">
-                    <strong>20+</strong>
-                    <span>Στελέχη & Συνεργάτες</span>
-                </div>
-                <div class="stat-card">
-                    <strong>15+</strong>
-                    <span>Έτη Εμπειρίας στο ΟΣΔΕ</span>
-                </div>
-                <div class="stat-card">
-                    <strong>10+</strong>
-                    <span>Γεωπόνοι & Σύμβουλοι</span>
                 </div>
             </div>
         </section>
@@ -108,19 +87,25 @@
             </ul>
         </section>
 
-        <!-- ΕΝΟΤΗΤΑ: ΔΙΑΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ -->
-        <section id="interoperability">
-            <h2>Αυτόματη Άντληση & Ψηφιακά Δικαιολογητικά</h2>
-            <p>Η ΕΑΕ 2026 συνδέεται απευθείας online με τις βάσεις δεδομένων, περιορίζοντας τα έγγραφα που χρειάζεται να προσκομίσετε[cite: 1]:</p>
+        <!-- ΕΝΟΤΗΤΑ: ΕΝΕΡΓΟΣ ΓΕΩΡΓΟΣ -->
+        <section id="active-farmer">
+            <h2>Ποιος θεωρείται Ενεργός Γεωργός;</h2>
+            <p>Σύμφωνα με την εγκύκλιο 2026, ισχύουν τα εξής κριτήρια:</p>
             <ul>
-                <li><strong>Φορολογικό Μητρώο & IBAN:</strong> Αντλούνται απευθείας από την ΑΑΔΕ[cite: 1].</li>
-                <li><strong>Ε9 & Μισθώσεις:</strong> Τα ιδιόκτητα και ενοικιαζόμενα αγροτεμάχια συνδέονται online από τις δηλώσεις ακίνητης περιουσίας[cite: 1].</li>
-                <li><strong>Κτηνοτροφία:</strong> Το ζωικό κεφάλαιο και οι ενδοστομαχικοί βώλοι αιγοπροβάτων αντλούνται σε πραγματικό χρόνο από το ΟΠΣΚ[cite: 1].</li>
+                <li><strong>Ο κανόνας των 5.000 €:</strong> Όσοι δικαιούνταν άμεσες ενισχύσεις έως 5.000 € το 2025, θεωρούνται αυτόματα ενεργοί γεωργοί.</li>
+                <li><strong>Ενισχύσεις άνω των 5.000 €:</strong> Απαιτείται είτε οι περσινές ενισχύσεις να αποτελούν τουλάχιστον το 5% των μη γεωργικών εσόδων (Κριτήριο 5%), είτε τα γεωργικά έσοδα να είναι τουλάχιστον το 10% των συνολικών εσόδων (Κριτήριο 10%).</li>
+                <li><strong>Μαύρη Λίστα & Εξαίρεση 1/3:</strong> Εταιρείες διαχείρισης ξενοδοχείων, κάμπινγκ κ.λπ. αποκλείονται, εκτός εάν οι γεωργικές δραστηριότητες αντιπροσωπεύουν τουλάχιστον το 33,3% του κύκλου εργασιών τους.</li>
             </ul>
+        </section>
 
-            <div class="warning-box">
-                <strong>Προσοχή στον IBAN Αγροτικών Ενισχύσεων:</strong> Ο λογαριασμός πρέπει να είναι αποκλειστικά ελληνικής τράπεζας και να ταυτοποιείται ο συνδυασμός ΑΦΜ-IBAN, διαφορετικά η εφαρμογή θα τον απορρίψει[cite: 1].
-            </div>
+        <!-- ΕΝΟΤΗΤΑ: ΔΙΚΑΙΩΜΑΤΑ & ΝΕΟΕΙΣΕΡΧΟΜΕΝΟΙ -->
+        <section id="rights">
+            <h2>Δικαιώματα Βασικής Ενίσχυσης & Νεοεισερχόμενοι</h2>
+            <ul>
+                <li><strong>Οι 3 Αγροτικές Περιφέρειες:</strong> ΠΕ1 (Βοσκότοποι), ΠΕ2 (Αρόσιμες), ΠΕ3 (Μόνιμες καλλιέργειες/δενδρώνες).</li>
+                <li><strong>Σύγκλιση (Flat Rate):</strong> Πλήρης εξίσωση της αξίας των δικαιωμάτων εντός της ίδιας περιφέρειας με τον μέσο όρο για το 2026.</li>
+                <li><strong>Νεοεισερχόμενοι Φυσικά Πρόσωπα:</strong> Ενήλικες (18+ ετών) με έναρξη δραστηριότητας το 2024, 2025 ή 2026 και έλεγχο μη άσκησης γεωργίας την προηγούμενη 5ετία.</li>
+            </ul>
         </section>
 
         <!-- ΕΝΟΤΗΤΑ: ΠΡΟΘΕΣΜΙΕΣ -->
@@ -134,58 +119,51 @@
             </ul>
         </section>
 
-        <!-- ΕΝΟΤΗΤΑ: ΕΠΙΚΟΙΝΩΝΙΑ & ΓΡΑΦΕΙΑ -->
+        <!-- ΕΝΟΤΗΤΑ: ΕΠΙΚΟΙΝΩΝΙΑ -->
         <section id="contact">
             <h2>Σημεία Εξυπηρέτησης & Επικοινωνία</h2>
-            <p>Επικοινωνήστε με τα γραφεία μας για να κλείσετε το ραντεβού σας για την υποβολή της αίτησης 2026.</p>
-            
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>Κεντρικό Γραφείο</h3>
-                    <p><strong>Διεύθυνση:</strong> Οδός Αγροτών 12, Τ.Κ. 10000, Αθήνα</p>
+                    <p><strong>ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ</strong></p>
+                    <p><strong>Διεύθυνση:</strong> Οδός Αγροτών 12, Αθήνα</p>
                     <p><strong>Τηλέφωνα:</strong> 210 0000000, 210 1111111</p>
                     <p><strong>Email:</strong> info@geopoliteia.gr</p>
-                </div>
-                <div class="contact-card">
-                    <h3>Διοίκηση & Υπεύθυνοι</h3>
-                    <p><strong>Πρόεδρος / Ιδιοκτήτης:</strong> Γεώργιος Παπαδόπουλος</p>
-                    <p><strong>Υπεύθυνος ΟΣΔΕ:</strong> Νικόλαος Γεωργίου</p>
-                    <p><strong>Τεχνική Υποστήριξη / GIS:</strong> Μαρία Αντωνίου</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- MODALS ΓΙΑ ΟΔΗΓΟΥΣ -->
+    <!-- MODALS ΓΙΑ ΤΟΥΣ ΟΔΗΓΟΥΣ -->
     <div id="modal-genikos" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-genikos')">&times;</span>
-            <h2>Γενικός Οδηγός ΕΑΕ 2026</h2>
-            <p>Εδώ αναγράφονται οι βασικές προϋποθέσεις, τα απαραίτητα δικαιολογητικά ταυτοποίησης, οι κανόνες του ενεργού γεωργού και οι προθεσμίες υποβολής.</p>
+            <h2>Γενικός Οδηγός & Σκοπός</h2>
+            <p>Η εγκύκλιος 2045/04.08.2026 παρέχει δεσμευτικές οδηγίες για την ΕΑΕ. Κάθε παραγωγός υποχρεούται να υποβάλει μία και μοναδική αίτηση ετησίως, δηλώνοντας εκμεταλλεύσεις, ζώα και δικαιώματα.</p>
         </div>
     </div>
 
-    <div id="modal-elaiokomia" class="modal">
+    <div id="modal-kaθεστωτα" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-elaiokomia')">&times;</span>
-            <h2>Οδηγός Ελαιοκομίας</h2>
-            <p>Πληροφορίες για τα ελαιοτεμάχια, την ψηφιακή αποτύπωση GIS, τους ελέγχους και τη δήλωση ελαιοκομικών εκμεταλλεύσεων.</p>
+            <span class="close" onclick="closeModal('modal-kaθεστωτα')">&times;</span>
+            <h2>Καθεστώτα Ενίσχυσης</h2>
+            <p>Περιλαμβάνει Βασική Στήριξη, Αναδιανεμητική, Νέους Γεωργούς, Οικολογικά Σχήματα (Eco-schemes), Ειδική Ενίσχυση για το Βαμβάκι, τομεακά προγράμματα και Μικρά Νησιά Αιγαίου.</p>
         </div>
     </div>
 
-    <div id="modal-ktinotrofia" class="modal">
+    <div id="modal-monitoring" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-ktinotrofia')">&times;</span>
-            <h2>Οδηγός Κτηνοτροφίας</h2>
-            <p>Στοιχεία για ζωικό κεφάλαιο, βοσκότοπους, διασταυρώσεις με ΟΠΣΚ και ενδοστομαχικούς βώλους αιγοπροβάτων.</p>
+            <span class="close" onclick="closeModal('modal-monitoring')">&times;</span>
+            <h2>Έλεγχοι & Monitoring</h2>
+            <p>Εφαρμογή του Συστήματος Παρακολούθησης Εκτάσεων (AMS) με δορυφορικά δεδομένα. Παρέχεται η δυνατότητα διορθώσεων χωρίς ποινές εάν εντοπιστεί ασυμφωνία.</p>
         </div>
     </div>
 
-    <div id="modal-eco" class="modal">
+    <div id="modal-demosio" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-eco')">&times;</span>
-            <h2>Οικολογικά Σχήματα (Eco Schemes)</h2>
-            <p>Περιβαλλοντικές δράσεις, σύνταξη Σχεδίου Περιβαλλοντικής Διαχείρισης (ΣΠΔ) και τεχνολογίες γεωργίας ακριβείας.</p>
+            <span class="close" onclick="closeModal('modal-demosio')">&times;</span>
+            <h2>Αγροτεμάχια Δημοσίου</h2>
+            <p>Για εκτάσεις του Δημοσίου απαιτείται βεβαίωση μίσθωσης από τον αρμόδιο Φορέα (Δήμο ή Δασική Υπηρεσία) με υποχρεωτική αναγραφή του ΚΑΕΚ και της ακριβούς έκτασης.</p>
         </div>
     </div>
 
@@ -193,26 +171,22 @@
         <p>&copy; 2026 ΓΕΩΠΟΛΙΤΕΙΑ ΑΕ. Η σελίδα έχει ενημερωτικό χαρακτήρα. Υπερισχύουν τα επίσημα κείμενα.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('fosterMenu');
             menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
-
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "flex";
         }
-
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.style.display = "none";
             }
         }
     </script>
-
 </body>
 </html>
