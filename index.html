@@ -12,8 +12,9 @@
     <section class="hero-section">
         <h1 class="hero-brand">ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ</h1>
         <ul class="hero-menu">
+            <li><a href="#about">Studio</a></li>
             <li><a href="#guides">Οδηγοί</a></li>
-            <li><a href="#contact">Επικοινωνία</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </section>
 
@@ -54,9 +55,10 @@
         </section>
     </main>
 
-    <!-- FOOTER (Καθαρό, μόνο με στοιχεία επικοινωνίας και ωράριο) -->
+    <!-- FOOTER (Ακριβώς όπως το reference του 1100 Architect) -->
     <footer id="contact">
-        <div class="footer-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="footer-grid">
+            <!-- Στήλη 1: Έδρα / Στοιχεία -->
             <div class="footer-col">
                 <h4>ΕΔΡΑ / ΕΠΙΚΟΙΝΩΝΙΑ</h4>
                 <p><strong>ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ</strong></p>
@@ -65,11 +67,31 @@
                 <p>Email: info@geopoliteia.com</p>
             </div>
 
+            <!-- Στήλη 2: Υπεύθυνος & Ωράριο -->
             <div class="footer-col">
                 <h4>ΥΠΕΥΘΥΝΟΣ & ΩΡΑΡΙΟ</h4>
                 <p><strong>Ευριπίδης Ρίζος</strong></p>
                 <p>Γεωπόνος Μελετητής</p>
                 <p>Δευτέρα - Παρασκευή: 08:00 - 16:00</p>
+            </div>
+
+            <!-- Στήλη 3: Newsletter & Links (Ακριβώς όπως το reference) -->
+            <div class="footer-col">
+                <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Ευχαριστούμε για την εγγραφή σας!');">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Submit</button>
+                </form>
+                
+                <div class="footer-links">
+                    <a href="#imprint">IMPRINT</a>
+                    <a href="#privacy">PRIVACY POLICY</a>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#" title="Instagram">ig</a>
+                    <a href="#" title="LinkedIn">in</a>
+                </div>
             </div>
         </div>
 
