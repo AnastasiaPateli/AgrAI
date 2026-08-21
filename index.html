@@ -9,7 +9,7 @@
 <body>
 
     <!-- HERO SECTION -->
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
         <h1 class="hero-brand">ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ</h1>
         <ul class="hero-menu">
             <li><a href="#guides">Οδηγοί</a></li>
@@ -112,6 +112,16 @@
     </div>
 
     <script>
+        // Animation στο scroll για το background
+        window.addEventListener('scroll', function() {
+            const hero = document.getElementById('hero');
+            if (window.scrollY > 50) {
+                hero.classList.add('scrolled');
+            } else {
+                hero.classList.remove('scrolled');
+            }
+        });
+
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
