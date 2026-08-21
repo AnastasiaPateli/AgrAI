@@ -1,150 +1,229 @@
-<!DOCTYPE html>
-<html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ - ΟΣΔΕ / ΕΑΕ 2026</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
 
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-        <h1 class="hero-brand">ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ</h1>
-        <ul class="hero-menu">
-            <li><a href="#about">Studio</a></li>
-            <li><a href="#guides">Οδηγοί</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </section>
+:root {
+    --bg-cream: #f2f0eb; /* Απαλό γκρι-μπεζ του reference */
+    --primary-blue: #0b2b44;
+    --text-color: #222222;
+    --white: #ffffff;
+}
 
-    <main>
-        <!-- ΚΕΙΜΕΝΟ ΠΕΡΙΓΡΑΦΗΣ ΓΡΑΦΕΙΟΥ -->
-        <section id="about" class="content-section">
-            <div class="about-text">
-                <p>Η <strong>ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ</strong>, με έδρα στο Δημητρίτσι Σερρών και υπό την επιστημονική καθοδήγηση του Ευριπίδη Ρίζου, Γεωπόνου Μελετητή, προσφέρει ολοκληρωμένες υπηρεσίες υψηλού επιπέδου στον πρωτογενή τομέα.</p>
-                <p>Ειδικευόμαστε στην οργάνωση, τεκμηρίωση και ψηφιακή υποβολή της Ενιαίας Αίτησης Ενίσχυσης (ΟΣΔΕ / ΕΑΕ 2026), συνδυάζοντας γεωχωρική τεχνογνωσία GIS, μελέτες επιδοτήσεων, εφαρμογή οικολογικών σχημάτων και εξατομικευμένη τεχνική υποστήριξη για κάθε αγρότη και κτηνοτρόφο.</p>
-            </div>
-        </section>
+html {
+    scroll-behavior: smooth;
+}
 
-        <!-- ΟΔΗΓΟΙ & ΚΑΘΕΣΤΩΤΑ -->
-        <section id="guides" class="guides-container">
-            <h2>ΕΑΕ 2026 — Οι Οδηγοί μας</h2>
-            <div class="guides-grid">
-                <div class="guide-card" onclick="openModal('modal-genikos')">
-                    <h3>📋 Γενικός Οδηγός & Σκοπός</h3>
-                    <p>Φιλοσοφία ΕΑΕ 2026, υποχρέωση μίας αίτησης και αποδεκτές ενισχύσεις.</p>
-                    <span class="guide-link">Άνοιγμα οδηγού →</span>
-                </div>
-                <div class="guide-card" onclick="openModal('modal-kaθεστωτα')">
-                    <h3>🌾 Καθεστώτα Ενίσχυσης</h3>
-                    <p>Βασική, αναδιανεμητική, νέοι γεωργοί, eco-schemes και συνδεδεμένες.</p>
-                    <span class="guide-link">Άνοιγμα οδηγού →</span>
-                </div>
-                <div class="guide-card" onclick="openModal('modal-eco-schemes')">
-                    <h3>🌿 Οικολογικά Σχήματα</h3>
-                    <p>Επισκόπηση βασικών παρεμβάσεων, φυτοκάλυψης και κυκλικής οικονομίας.</p>
-                    <span class="guide-link">Άνοιγμα οδηγού →</span>
-                </div>
-                <div class="guide-card" onclick="openModal('modal-monitoring')">
-                    <h3>🛰️ Έλεγχοι & Monitoring</h3>
-                    <p>Δορυφορική παρακολούθηση (AMS), διορθώσεις χωρίς ποινές και κυρώσεις.</p>
-                    <span class="guide-link">Άνοιγμα οδηγού →</span>
-                </div>
-            </div>
-        </section>
-    </main>
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-    <!-- FOOTER (Ακριβώς όπως το reference του 1100 Architect) -->
-    <footer id="contact">
-        <div class="footer-grid">
-            <!-- Στήλη 1: Έδρα / Στοιχεία -->
-            <div class="footer-col">
-                <h4>ΕΔΡΑ / ΕΠΙΚΟΙΝΩΝΙΑ</h4>
-                <p><strong>ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ</strong></p>
-                <p>Δημητρίτσι, Σέρρες</p>
-                <p>Τηλ: 23220-61100</p>
-                <p>Email: info@geopoliteia.com</p>
-            </div>
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4rem;
+    box-sizing: border-box;
+}
 
-            <!-- Στήλη 2: Υπεύθυνος & Ωράριο -->
-            <div class="footer-col">
-                <h4>ΥΠΕΥΘΥΝΟΣ & ΩΡΑΡΙΟ</h4>
-                <p><strong>Ευριπίδης Ρίζος</strong></p>
-                <p>Γεωπόνος Μελετητής</p>
-                <p>Δευτέρα - Παρασκευή: 08:00 - 16:00</p>
-            </div>
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
 
-            <!-- Στήλη 3: Newsletter & Links (Ακριβώς όπως το reference) -->
-            <div class="footer-col">
-                <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Ευχαριστούμε για την εγγραφή σας!');">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit">Submit</button>
-                </form>
-                
-                <div class="footer-links">
-                    <a href="#imprint">IMPRINT</a>
-                    <a href="#privacy">PRIVACY POLICY</a>
-                </div>
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
 
-                <div class="social-icons">
-                    <a href="#" title="Instagram">ig</a>
-                    <a href="#" title="LinkedIn">in</a>
-                </div>
-            </div>
-        </div>
+.hero-brand {
+    font-size: 5.5rem;
+    font-weight: 200;
+    color: var(--primary-blue);
+    letter-spacing: -2px;
+    margin: 0;
+    line-height: 1;
+}
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 ΓΕΩΠΟΛΙΤΕΙΑ ΕΕ. Η σελίδα έχει ενημερωτικό χαρακτήρα. Υπερισχύουν τα επίσημα κείμενα.</p>
-        </div>
-    </footer>
+.hero-menu {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- MODALS -->
-    <div id="modal-genikos" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-genikos')">&times;</span>
-            <h2>Γενικός Οδηγός & Σκοπός</h2>
-            <p>Η εγκύκλιος 2045/04.08.2026 παρέχει δεσμευτικές οδηγίες για την ΕΑΕ. Κάθε παραγωγός υποχρεούται να υποβάλει μία και μοναδική αίτηση ετησίως.</p>
-        </div>
-    </div>
+.hero-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    transition: opacity 0.2s;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
 
-    <div id="modal-kaθεστωτα" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-kaθεστωτα')">&times;</span>
-            <h2>Καθεστώτα Ενίσχυσης</h2>
-            <p>Περιλαμβάνει Βασική Στήριξη, Αναδιανεμητική, Νέους Γεωργούς, Οικολογικά Σχήματα (Eco-schemes) και συνδεδεμένες ενισχύσεις.</p>
-        </div>
-    </div>
+.hero-menu a:hover {
+    opacity: 0.7;
+}
 
-    <div id="modal-eco-schemes" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-eco-schemes')">&times;</span>
-            <h2>Οικολογικά Σχήματα (Eco-schemes)</h2>
-            <p>Περιλαμβάνει δράσεις ανθεκτικών ειδών, φυτοκάλυψης 70%, φυτά-ξενιστές επικονιαστών και εφαρμογές κυκλικής οικονομίας.</p>
-        </div>
-    </div>
+/* MAIN CONTENT */
+.content-section {
+    max-width: 1100px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
 
-    <div id="modal-monitoring" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-monitoring')">&times;</span>
-            <h2>Έλεγχοι & Monitoring</h2>
-            <p>Εφαρμογή του Συστήματος Παρακολούθησης Εκτάσεων (AMS) με δορυφορικά δεδομένα και δυνατότητα διορθώσεων.</p>
-        </div>
-    </div>
+.about-text {
+    max-width: 650px;
+    font-size: 1.25rem;
+    color: #444444;
+    line-height: 1.8;
+    font-weight: 300;
+}
 
-    <script>
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "flex";
-        }
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
-            }
-        }
-    </script>
-</body>
-</html>
+.about-text p {
+    margin-bottom: 2rem;
+}
+
+/* OΔΗΓΟΙ SECTION */
+.guides-container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.guides-container h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.guide-card {
+    background: var(--bg-cream);
+    padding: 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-card h3 {
+    margin-top: 0;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.guide-card p {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 300;
+}
+
+.guide-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 400;
+    color: var(--primary-blue);
+    font-size: 0.9rem;
+}
+
+/* FOOTER (Καθαρό, δύο στηλών) */
+footer {
+    background-color: var(--bg-cream);
+    color: #333333;
+    padding: 5rem 4rem 3rem 4rem;
+    margin-top: 6rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-col h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+.footer-col p {
+    margin: 0.3rem 0;
+    color: #444;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #dcd8d0;
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: left;
+}
+
+/* MODALS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    font-weight: 300;
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem; top: 1.2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
