@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
 }
 
-/* HERO SECTION (Με τη νέα σας φωτογραφία background.jpg) */
+/* HERO SECTION */
 .hero-section {
     position: relative;
     width: 100%;
@@ -34,7 +34,6 @@ body {
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-/* Όταν γίνεται scroll, η εικόνα παίρνει εφέ βάθους (zoom out & fade) */
 .hero-section.scrolled {
     transform: scale(0.98);
     opacity: 0.85;
@@ -53,13 +52,15 @@ body {
     z-index: 2;
 }
 
+/* Τίτλος: Πολύ μεγαλύτερος, απλώνεται προς τα δεξιά */
 .hero-brand {
-    font-size: 5.5rem;
+    font-size: 7.5rem;
     font-weight: 200;
     color: var(--primary-blue);
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     margin: 0;
-    line-height: 1;
+    line-height: 0.9;
+    max-width: 65%; /* Του επιτρέπει να απλωθεί αριστερά-κέντρα */
 }
 
 .hero-menu {
@@ -68,6 +69,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
 .hero-menu a {
@@ -232,5 +234,8 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    .hero-brand {
+        font-size: 4rem;
     }
 }
