@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
 
 :root {
-    --bg-cream: #f2f0eb;
+    --bg-cream: #f2f0eb; /* Απαλό γκρι-μπεζ του reference */
     --primary-blue: #0b2b44;
     --text-color: #222222;
     --white: #ffffff;
@@ -61,6 +61,187 @@ body {
     line-height: 0.9;
     max-width: 65%;
 }
+
+.hero-menu {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.hero-menu a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    transition: opacity 0.2s;
+    text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+}
+
+.hero-menu a:hover {
+    opacity: 0.7;
+}
+
+/* MAIN CONTENT */
+.content-section {
+    max-width: 900px;
+    margin: 7rem auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 850px;
+    font-size: 1.25rem;
+    color: #444444;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.about-text p {
+    margin-bottom: 2rem;
+}
+
+/* ΟΔΗΓΟΙ SECTION */
+.guides-container {
+    max-width: 1200px;
+    margin: 8rem auto;
+    padding: 0 2rem;
+}
+
+.section-main-title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--primary-blue);
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.guide-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 8rem;
+    cursor: pointer;
+    border-bottom: 1px solid #eae6df;
+    padding-bottom: 6rem;
+}
+
+.guide-title-side h3 {
+    font-size: 4rem;
+    font-weight: 200;
+    color: var(--primary-blue);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    transition: opacity 0.2s;
+}
+
+.guide-row:hover .guide-title-side h3 {
+    opacity: 0.6;
+}
+
+.guide-info-side p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* FOOTER (Επικοινωνία: Μεγαλύτερο "παράθυρο" και μεγαλύτερα γράμματα) */
+footer {
+    background-color: var(--bg-cream);
+    color: #333333;
+    padding: 7rem 5rem 4rem 5rem; /* Μεγαλύτερα περιθώρια/παράθυρο */
+    margin-top: 8rem;
+    font-size: 1.15rem; /* Μεγαλύτερη βασική γραμματοσειρά */
+    font-weight: 300;
+}
+
+.footer-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 5rem;
+}
+
+.footer-col h4 {
+    font-size: 1rem; /* Μεγαλύτεροι τίτλοι στηλών */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.footer-col p {
+    margin: 0.5rem 0;
+    color: #222;
+    font-size: 1.2rem; /* Μεγαλύτερα γράμματα στα στοιχεία */
+}
+
+.footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    border-top: 1px solid #dcd8d0;
+    padding-top: 2.5rem;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: left;
+}
+
+/* MODALS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    font-weight: 300;
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem; top: 1.2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .guide-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .guide-title-side h3 {
+        font-size: 3rem;
+    }
+    .hero-brand {
+        font-size: 4rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}}
 
 .hero-menu {
     display: flex;
