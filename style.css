@@ -150,7 +150,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* FOOTER (Καθαρό, δύο στηλών) */
+/* FOOTER (Ακριβώς όπως το 1100 Architect reference) */
 footer {
     background-color: var(--bg-cream);
     color: #333333;
@@ -164,7 +164,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.2fr;
     gap: 4rem;
     margin-bottom: 4rem;
 }
@@ -181,6 +181,67 @@ footer {
 .footer-col p {
     margin: 0.3rem 0;
     color: #444;
+}
+
+/* Newsletter Form Στυλ Reference */
+.newsletter-form {
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.3rem;
+    width: 100%;
+    max-width: 320px;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    width: 100%;
+}
+
+.newsletter-form button {
+    background: transparent;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    white-space: nowrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.social-icons a {
+    color: #333;
+    text-decoration: none;
 }
 
 .footer-bottom {
