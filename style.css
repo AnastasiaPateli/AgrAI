@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
+
 :root {
     --bg-cream: #f2f0eb; /* Απαλό γκρι-μπεζ του reference */
     --primary-blue: #0b2b44;
@@ -10,7 +12,7 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--white);
@@ -18,7 +20,7 @@ body {
     line-height: 1.6;
 }
 
-/* HERO SECTION (Αρχική οθόνη με background image) */
+/* HERO SECTION (Αρχική οθόνη) */
 .hero-section {
     position: relative;
     width: 100%;
@@ -31,7 +33,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Σκοτεινό φίλτρο για να διαβάζονται τα γράμματα αν η φωτό είναι φωτεινή */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -45,17 +46,17 @@ body {
     z-index: 2;
 }
 
-/* Όνομα εταιρείας κάτω αριστερά με σκούρο μπλε */
+/* Όνομα εταιρείας κάτω αριστερά: Μεγάλο, λεπτεπίλεπτο & κομψό */
 .hero-brand {
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 5.5rem; /* Μεγαλύτερο μέγεθος */
+    font-weight: 200;  /* Εξαιρετικά λεπτό (Thin) */
     color: var(--primary-blue);
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     margin: 0;
     line-height: 1;
 }
 
-/* Μενού δεξιά (όπως στο 1100 Architect) */
+/* Μενού δεξιά */
 .hero-menu {
     display: flex;
     gap: 3rem;
@@ -67,8 +68,8 @@ body {
 .hero-menu a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 300; /* Λεπτά γράμματα και στο μενού */
     transition: opacity 0.2s;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
@@ -109,7 +110,7 @@ body {
     font-size: 2rem;
     color: var(--primary-blue);
     margin-bottom: 2rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .guides-grid {
@@ -134,28 +135,31 @@ body {
     margin-top: 0;
     color: var(--primary-blue);
     font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .guide-card p {
     font-size: 0.95rem;
     color: #666;
+    font-weight: 300;
 }
 
 .guide-link {
     display: inline-block;
     margin-top: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-blue);
     font-size: 0.9rem;
 }
 
-/* FOOTER (Απαλό γκρι-μπεζ περιθώριο όπως το reference) */
+/* FOOTER (Απαλό γκρι-μπεζ περιθώριο) */
 footer {
     background-color: var(--bg-cream);
     color: #333333;
     padding: 5rem 4rem 3rem 4rem;
     margin-top: 6rem;
     font-size: 0.95rem;
+    font-weight: 300;
 }
 
 .footer-grid {
@@ -173,6 +177,7 @@ footer {
     letter-spacing: 1px;
     color: #777;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .footer-col p {
@@ -207,6 +212,7 @@ footer {
     width: 90%;
     max-width: 500px;
     position: relative;
+    font-weight: 300;
 }
 
 .close {
